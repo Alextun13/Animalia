@@ -1,0 +1,56 @@
+   {% extends 'store/main.html' %}
+   {% load static %}
+
+
+{% block title %}
+   Pedidos
+{% endblock title %}
+   
+{% block content %}
+   
+
+<section class="orders">
+      
+      {% if order %}
+         
+      
+      <h1 class="heading">Pedidos realizados</h1>
+     
+        <div class="box-container">
+            <div class="box">
+                <p>Pedido el Dia : <span>{{order.order_date}}</span></p>
+                <p>Nombre Completo : <span>{{address.name}}</span></p>
+                <p>Correo : <span>{{address.email}}</span></p>
+                <p>Numero Telefonico : <span>{{address.mobile_no}}</span></p>
+                <p>Direccion : <span>{{shipped_address}}</span></p>
+                <p>Metodo de Pago : <span>{{order.payment_mode}}</span></p>
+                
+               <p>Precio Total : <span>${{total_price}}</span></p>
+               <p> Estado del Pago : <span>{{order.order_status}} </span> </p>
+            </div>
+         </div>
+
+
+
+         <!-- Pedidos Anteriores Comienzo -->
+         <div class="box-container">
+            <div class="box">
+         <h2 class="heading">Pedidos anteriores</h1>
+            <p>Tus pedidos Anteriores : <span>
+               {% for order in orders %}
+               {{order.product_id.name}}
+               ($ {{order.product_id.price}} Cantidad: {{order.quantity}})
+               {% endfor %}
+            </span></p>
+         </div>
+      </div>
+
+       <!-- Pedidos Anteriores Fin -->
+
+         {% else %}
+            <div class="cart-total">
+               <p>No tienes pedidos pendientes!</p>
+            </div>
+      {% endif %}
+      </section>
+{% endblock content %}

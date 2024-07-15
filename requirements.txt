@@ -1,0 +1,6 @@
+asgiref==3.5.2
+Django
+Pillow
+psycopg2-binary
+sqlparse
+mysqlclient

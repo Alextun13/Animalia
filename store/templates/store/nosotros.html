@@ -1,0 +1,75 @@
+{% extends 'store/main.html' %}
+{% load static %}
+
+
+{% block title %}
+   Nosotros
+{% endblock title %}
+   
+
+{% block content %}
+   
+
+     <section class="about">
+
+        <div class="row">
+     
+           <div class="image">
+              <img src="{% static 'images/logo husky animalía hd.png' %}" alt="">
+            </div>
+            
+           <div class="content">
+              <h3>¿Por qué elegirnos?</h3>
+              <p>¡Bienvenidos a Animalía, tu tienda ideal para todas las necesidades de tus mascotas!</p>
+               <p>Elegirnos significa acceder a una variada selección de productos de alta calidad para tus amigos peludos, contar con el asesoramiento de expertos en cuidado animal, disfrutar de un ambiente acogedor y lleno de amor por los animales, participar en eventos especiales y recibir un servicio al cliente excepcional. Ven a visitarnos y descubre todo lo que tenemos para ofrecerte en el mundo del cuidado y bienestar de tus mascotas. ¡Te esperamos con los brazos abiertos en Animalía!</p>
+              <a href="{% url 'nosotros' %}" class="btn"> Contáctanos</a>
+            </div>
+     
+        </div>
+     
+      </section>
+      
+     <section class="reviews">
+   
+        <h1 class="heading">Equipo</h1>
+     
+        <div class="swiper reviews-slider">
+     
+        <div class="swiper-wrapper">
+           
+           <div class="swiper-slide slide">
+              <img src="{% static 'images/alex2.jpg' %}" alt="">
+              <p>A cargo de administrar la página web y revisar que todo esté en orden, como también actualizar información que se le diga.</p>
+              <div class="stars">
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+              </div>
+              <h3> Alexander Lucero</h3>
+           </div>
+           
+           <div class="swiper-slide slide">
+              <img src="{% static 'images/yo2.jpg' %}" alt="">
+              <p>Encargado de la administración de la tienda y creador de esta, gestionando a todos los trabajadores y las actividades a realizar.
+            </p>
+              <div class="stars">
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+               </div>
+               <h3>Pedro Salazar</h3>
+            </div>
+     
+           
+     
+         </div>
+         
+        
+      </div>
+      
+   </section>
+   {% endblock content %}
